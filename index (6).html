@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grant T. Aguinaldo, PhD | Speaker</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --envera-green: #76A642;
+    --envera-green-dark: #5e8c32;
+    --envera-green-light: #8ab856;
+    --envera-green-dim: rgba(118, 166, 66, 0.12);
+    --envera-green-subtle: rgba(118, 166, 66, 0.06);
+
+    --bg-base: #ffffff;
+    --bg-elevated: #f5f7f9;
+    --bg-surface: #ffffff;
+    --bg-hover: #ebedf0;
+    --bg-chat: #f0f2f4;
+
+    --border-subtle: rgba(0, 0, 0, 0.06);
+    --border-default: rgba(0, 0, 0, 0.1);
+    --border-strong: rgba(0, 0, 0, 0.15);
+
+    --text-primary: #1a1d21;
+    --text-secondary: #4b5563;
+    --text-tertiary: #6b7280;
+    --text-muted: #9ca3af;
+
+    --accent-green: #059669;
+    --accent-green-dim: rgba(5, 150, 105, 0.12);
+    --accent-amber: #d97706;
+    --accent-amber-dim: rgba(217, 119, 6, 0.12);
+    --accent-red: #dc2626;
+    --accent-red-dim: rgba(220, 38, 38, 0.1);
+    --accent-blue: #3b82f6;
+    --accent-blue-dim: rgba(59, 130, 246, 0.1);
+
+    --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+    --radius-xl: 20px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--font-sans);
+    background: var(--bg-elevated);
+    color: var(--text-primary);
+    line-height: 1.65;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--bg-base);
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 64px 40px 56px;
+  }
+
+  .hero-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .hero-photo {
+    flex-shrink: 0;
+    width: 120px;
+    height: 120px;
+    border-radius: var(--radius-xl);
+    background: var(--envera-green-dim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--envera-green-dark);
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.3px;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+
+  .hero-tagline {
+    font-size: 16px;
+    color: var(--text-secondary);
+    font-weight: 400;
+    margin-bottom: 12px;
+  }
+
+  .hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .meta-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: var(--text-tertiary);
+    font-weight: 500;
+    background: var(--bg-elevated);
+    padding: 5px 12px;
+    border-radius: 100px;
+    border: 1px solid var(--border-subtle);
+  }
+
+  .meta-chip svg {
+    width: 14px;
+    height: 14px;
+    stroke: var(--envera-green);
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  /* ── MAIN ── */
+  .main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 40px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  /* ── CARD ── */
+  .card {
+    background: var(--bg-base);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+  }
+
+  .card-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--envera-green);
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .card h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    letter-spacing: -0.2px;
+  }
+
+  .card p {
+    font-size: 15px;
+    color: var(--text-secondary);
+    font-weight: 400;
+    line-height: 1.7;
+    max-width: 680px;
+  }
+
+  .card p + p {
+    margin-top: 10px;
+  }
+
+  /* ── TOPICS ── */
+  .topics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 16px;
+  }
+
+  .topic {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 20px;
+  }
+
+  .topic-number {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--envera-green);
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .topic h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+  }
+
+  .topic p {
+    font-size: 13px;
+    color: var(--text-tertiary);
+    line-height: 1.6;
+    max-width: none;
+  }
+
+  /* ── TWO COL ── */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  /* ── CREDENTIALS ── */
+  .credential-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 8px;
+  }
+
+  .credential-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--text-secondary);
+  }
+
+  .cred-dot {
+    flex-shrink: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--envera-green);
+    margin-top: 8px;
+  }
+
+  .cred-label {
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  .cred-years {
+    display: inline-block;
+    margin-top: 12px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--envera-green-dark);
+    background: var(--envera-green-dim);
+    padding: 4px 10px;
+    border-radius: 6px;
+  }
+
+  /* ── TAGS ── */
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+  }
+
+  .tag {
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 500;
+    background: var(--bg-elevated);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-subtle);
+  }
+
+  /* ── VOLUNTEER ── */
+  .vol-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin-top: 16px;
+  }
+
+  .vol-item {
+    background: var(--envera-green-subtle);
+    border: 1px solid var(--envera-green-dim);
+    border-radius: var(--radius-md);
+    padding: 20px;
+  }
+
+  .vol-item h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+  }
+
+  .vol-item p {
+    font-size: 13px;
+    color: var(--text-tertiary);
+    max-width: none;
+    line-height: 1.5;
+  }
+
+  /* ── TESTIMONIAL ── */
+  .testimonial-empty {
+    border: 1px dashed var(--border-default);
+    border-radius: var(--radius-md);
+    padding: 32px;
+    text-align: center;
+    margin-top: 12px;
+  }
+
+  .testimonial-empty p {
+    font-style: italic;
+    color: var(--text-muted);
+    margin: 0 auto;
+    font-size: 14px;
+    max-width: 420px;
+  }
+
+  /* ── CTA ── */
+  .cta-card {
+    background: var(--text-primary);
+    border: none;
+    border-radius: var(--radius-xl);
+    padding: 48px;
+    text-align: center;
+  }
+
+  .cta-card h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--bg-base);
+    margin-bottom: 8px;
+  }
+
+  .cta-card p {
+    color: var(--text-muted);
+    font-size: 15px;
+    margin: 0 auto 24px;
+    max-width: 460px;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 24px;
+    border-radius: 100px;
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+  }
+
+  .btn svg {
+    width: 15px;
+    height: 15px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .btn-primary {
+    background: var(--envera-green);
+    color: white;
+  }
+
+  .btn-secondary {
+    background: rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.8);
+    border: 1px solid rgba(255,255,255,0.15);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    text-align: center;
+    padding: 24px 40px;
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .hero { padding: 48px 20px 40px; }
+    .hero-inner { flex-direction: column; text-align: center; gap: 24px; }
+    .hero-meta { justify-content: center; }
+    .hero-text h1 { font-size: 26px; }
+    .main { padding: 24px 20px 60px; gap: 20px; }
+    .card { padding: 24px; }
+    .topics-grid, .two-col { grid-template-columns: 1fr; }
+    .vol-grid { grid-template-columns: 1fr; }
+    .cta-card { padding: 36px 20px; }
+    .cta-buttons { flex-direction: column; align-items: center; }
+    .hero-photo { width: 96px; height: 96px; font-size: 28px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══ HERO ══ -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-photo"><img src="https://enveraconsulting.com/wp-content/uploads/2026/03/Screenshot-2026-03-02-at-6.16.37-PM.png" alt="Grant T. Aguinaldo, PhD" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;"></div>
+    <div class="hero-text">
+      <h1>Grant T. Aguinaldo, PhD</h1>
+      <div class="hero-tagline">Environmental Engineer · Speaker</div>
+      <div class="hero-meta">
+        <span class="meta-chip">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Hawaiʻi
+        </span>
+        <span class="meta-chip">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Los Angeles, CA
+        </span>
+        <a href="https://www.linkedin.com/in/grantaguinaldo" target="_blank" class="meta-chip" style="text-decoration: none;">
+          <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="main">
+
+  <!-- ══ OVERVIEW ══ -->
+  <div class="card">
+    <div class="card-label">Overview</div>
+    <h2>Real-World STEM. Science in Action.</h2>
+    <p>With nearly 20 years in environmental engineering and air quality consulting, Grant brings real industry experience into every talk. He translates complex engineering and regulatory challenges into practical insight, showing students, educators, and organizations how STEM shows up in the systems that shape everyday life.</p>
+    <p>Because STEM isn't just something you study. It's something that builds the world around us.</p>
+  </div>
+
+  <!-- ══ BIO + EDUCATION ══ -->
+  <div class="two-col">
+    <div class="card">
+      <div class="card-label">Bio</div>
+      <h2>About Grant</h2>
+      <p>Grant Aguinaldo, PhD is an environmental engineer, Maui native, and Principal at Envera Consulting. For nearly two decades, he has helped California facilities plan, permit, and operate within one of the most complex air quality regulatory environments in the country. He advises clients on permitting strategy, compliance, and the operational impacts of new and pending regulations in air quality, energy, and climate.</p>
+      <p>Grant has spoken at local and national conferences on decarbonization and hydrogen infrastructure and has been featured in trade publications. He works at the intersection of science and infrastructure, based in California and splitting time with Hawaiʻi.</p>
+      <p>Grant is passionate about helping students see how science moves beyond textbooks into the systems that power communities, from air quality and energy to infrastructure and technology. Through talks and workshops, he connects classroom learning to real careers, offering practical insight into what engineers actually do and how curiosity can become impact.</p>
+      <p style="margin-top: 16px; font-size: 13px; color: var(--text-tertiary);"><strong style="color: var(--text-secondary);">Credentials:</strong> PMP, Project Management Professional</p>
+    </div>
+    <div class="card">
+      <div class="card-label">Education</div>
+      <h2>Credentials</h2>
+      <ul class="credential-list">
+        <li>
+          <div class="cred-dot"></div>
+          <div><span class="cred-label">Doctor of Philosophy (PhD)</span><br>Systems Science · Binghamton University</div>
+        </li>
+        <li>
+          <div class="cred-dot"></div>
+          <div><span class="cred-label">Master of Science (MS)</span><br>Chemical Engineering · California State University, Long Beach</div>
+        </li>
+        <li>
+          <div class="cred-dot"></div>
+          <div><span class="cred-label">Master of Science (MS)</span><br>Biochemistry · University of Nevada, Las Vegas</div>
+        </li>
+        <li>
+          <div class="cred-dot"></div>
+          <div><span class="cred-label">Bachelor of Arts (BA)</span><br>Chemistry · University of Nevada, Las Vegas</div>
+        </li>
+        <li>
+          <div class="cred-dot"></div>
+          <div><span class="cred-label">Maui High School</span><br>Kahului, Hawaiʻi</div>
+        </li>
+      </ul>
+      <p style="margin-top: 12px; font-size: 13px; color: var(--text-tertiary);">Published scientist with peer reviewed research in chemistry and biochemistry.</p>
+    </div>
+  </div>
+
+  <!-- ══ SPEAKING TOPICS ══ -->
+  <div class="card">
+    <div class="card-label">Speaking Topics</div>
+    <h2>Signature Talks</h2>
+    <div class="topics-grid" style="grid-template-columns: 1fr 1fr 1fr;">
+      <div class="topic">
+        <span class="topic-number">01</span>
+        <h3>Real-World STEM</h3>
+        <p>How science and engineering move beyond textbooks into the systems that power communities, and how to bring that reality back into the classroom.</p>
+      </div>
+      <div class="topic">
+        <span class="topic-number">02</span>
+        <h3>STEM Pathways &amp; Representation</h3>
+        <p>Inspiring underrepresented students to pursue STEM careers through mentorship, visibility, and honest conversations about what the journey looks like.</p>
+      </div>
+      <div class="topic">
+        <span class="topic-number">03</span>
+        <h3>Technology, Energy &amp; the Future</h3>
+        <p>How technology and energy systems are converging to shape what comes next, and why the next generation of engineers needs to be ready.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ SPEAKING & OUTREACH ══ -->
+  <div class="card">
+    <div class="card-label">Speaking & Outreach</div>
+    <h2>Past Engagements</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px;">
+      <div style="background: var(--bg-elevated); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 20px;">
+        <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 500; color: var(--envera-green);">2024</span>
+        <h3 style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin: 8px 0 6px;">California Hydrogen Convention</h3>
+        <p style="font-size: 13px; color: var(--text-tertiary); line-height: 1.6;">Leveraging Computational Models to Support Strategic Decision Making With the Development of Hydrogen Infrastructure</p>
+      </div>
+      <div style="background: var(--bg-elevated); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 20px;">
+        <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 500; color: var(--envera-green);">2023</span>
+        <h3 style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin: 8px 0 6px;">AEE SoCal Chapter: Annual Conference</h3>
+        <p style="font-size: 13px; color: var(--text-tertiary); line-height: 1.6;">Overcoming Obstacles and Paving the Way for the Clean Energy Transition: A Focus on Infrastructure</p>
+      </div>
+      <div style="background: var(--bg-elevated); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 20px;">
+        <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 500; color: var(--envera-green);">2021</span>
+        <h3 style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin: 8px 0 6px;">University of Hawaiʻi</h3>
+        <p style="font-size: 13px; color: var(--text-tertiary); line-height: 1.6;">Hawaiʻi STEM K-12 Teacher Certification Network: From Competition to Collaboration</p>
+      </div>
+      <div style="background: var(--bg-elevated); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 20px;">
+        <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 500; color: var(--envera-green);">2017</span>
+        <h3 style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin: 8px 0 6px;">Marc and Eva Stern Math and Science School</h3>
+        <p style="font-size: 13px; color: var(--text-tertiary); line-height: 1.6;">Career Day Speaker: Engineering Careers · Los Angeles</p>
+      </div>
+      <div style="background: var(--bg-elevated); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 20px;">
+        <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 500; color: var(--envera-green);">2016</span>
+        <h3 style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin: 8px 0 6px;">USC Engineering Mentor Roundtable</h3>
+        <p style="font-size: 13px; color: var(--text-tertiary); line-height: 1.6;">Mentorship panel for engineering students</p>
+      </div>
+      <div style="background: var(--bg-elevated); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 20px;">
+        <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 500; color: var(--envera-green);">2014</span>
+        <h3 style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin: 8px 0 6px;">California State University Fullerton</h3>
+        <p style="font-size: 13px; color: var(--text-tertiary); line-height: 1.6;">Slice of Advice Speaker Series: Exploring Green Jobs Panel</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ AUDIENCE ══ -->
+  <div class="card">
+    <div class="card-label">Ideal Audience</div>
+    <h2>Who Benefits Most</h2>
+    <p>Grant's talks resonate with anyone who cares about STEM education, environmental stewardship, and preparing the next generation of engineers.</p>
+    <div class="tags">
+      <span class="tag">University Students</span>
+      <span class="tag">K to 12 Classrooms</span>
+      <span class="tag">Engineering Conferences</span>
+      <span class="tag">STEM Educators</span>
+      <span class="tag">Environmental Nonprofits</span>
+      <span class="tag">Career Development Panels</span>
+      <span class="tag">Community Organizations</span>
+      <span class="tag">Corporate STEM Initiatives</span>
+    </div>
+  </div>
+
+  <!-- ══ CTA ══ -->
+  <div class="cta-card">
+    <h2>Book Grant for Your Event</h2>
+    <p>Available for keynotes, panels, workshops, and classroom visits in Hawaiʻi, Los Angeles, and nationwide.</p>
+    <div class="cta-buttons">
+      <a href="/cdn-cgi/l/email-protection#e98e9b88879da98e9b88879d888e9c808788858d86c78a8684" class="btn btn-primary">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Get in Touch
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<footer>&copy; 2026 Grant T. Aguinaldo, PhD. 
